@@ -142,7 +142,7 @@ def _realign_dfs():
             idx_len = len(df)
             idx = df.index
 
-    for key in shared._DFS.keys():
+    for key in shared._DFS:
         try:
             shared._DFS[key] = _pd.DataFrame(
                 index=idx, data=shared._DFS[key]).drop_duplicates()
